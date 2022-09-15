@@ -1,4 +1,4 @@
-package com.project.sheika_store.model;
+package com.project.sheikah_store.model;
 
 public class model {
 
