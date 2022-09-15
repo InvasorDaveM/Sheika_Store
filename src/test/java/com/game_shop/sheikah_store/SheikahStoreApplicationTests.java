@@ -1,4 +1,4 @@
-package com.game_shop.sheika_store;
+package com.game_shop.sheikah_store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
