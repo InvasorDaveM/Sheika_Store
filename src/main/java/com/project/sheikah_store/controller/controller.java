@@ -1,4 +1,4 @@
-package com.project.sheika_store.controller;
+package com.project.sheikah_store.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
