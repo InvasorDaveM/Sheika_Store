@@ -1,4 +1,4 @@
-package com.project.sheika_store;
+package com.project.sheikah_store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
