@@ -9,54 +9,63 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
         crossorigin="anonymous"
         />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />    
+        <link rel="stylesheet" type="text/css" href="css/style.css" />  
+        
+        <!--AQUÍ CONECTE EL JAVASCRIPT-->
+        <script type="text/javascript" src="../javascript/main.js"></script>
+
+
         <title>Create Account</title>
       </head>
     <body style="background-image: url(img/background.jpg);">
         <nav class="navbackground"  >
           <div class="container">
             <a class="navbar-brand" href="log_in.html">
-              <img src="img/icon.png"
-              alt="Icono" width="110" height="100">
+              <img src="img/icon.png"width="110" height="100">
             </a>
             &nbsp;&nbsp;CREATE ACCOUNT
           </div>
         </nav>
       <div id = "back">
-        <div id = "divcreate">
+        <div id = "principalSection">
           <br/>
 
-          <form id="divcr1">
+          <form id="secondSection">
             <div class="mb-3">
               <label class="form-label">Name</label>
-              <input class="form-control" >
+              <input class="form-control" id="nameInput">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Address</label>
-              <input class="form-control" >
+              <label class="form-label">Address</label>
+              <input class="form-control" id="addressInput">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Birthdate</label>
+              <label class="form-label">Birthdate</label>
               <br/>
-              <input style="font-family: consolas; background-color: #00c1d5; width: 100%; height: 40px;" type="date" id="start" name="trip-start" min="1900-01-01">
+              <input style="font-family: consolas; background-color: #00c1d5; width: 100%; height: 40px;" type="date" id="birthdateInput" min="1900-01-01">
             </div>
           </form>
 
-          <form id="divcr2">
+          <form id="firstSection">
             <div class="mb-3">
               <label class="form-label">Create Your User Name</label>
-              <input class="form-control" >
+              <input class="form-control" id="userInput">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Create Your Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label class="form-label">Create Your Password</label>
+              <input type="password" class="form-control" id="passwordInput">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Comfirm Your Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label class="form-label">Comfirm Your Password</label>
+              <input type="password" class="form-control" id="confirmPasswordInput">
             </div>
             <a href="log_in.html">
-              <button style= "font-family: consolas; background-color: rgb(219, 143, 0); width: 40%; margin-left: 30%;" class="btn btn-primary"  type="button" value="clck here">CREATE ACCOUNT</button>
+
+              <!--REFERENCIANDO FUNCIÓN EN JAVASCRIPT-->
+              <button id="createCustomer" style= "font-family: consolas; background-color: rgb(219, 143, 0); width: 40%; margin-left: 30%;" class="btn btn-primary" onclick="insertCustomerData()">CREATE ACCOUNT</button> <!--onclick="insertCustomerData()"-->
+
+
+              
             </a> 
           </form>
 

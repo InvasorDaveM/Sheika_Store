@@ -1,1 +1,1 @@
-# Sheika_Store
+# Sheikah_Store

@@ -58,20 +58,20 @@ body{
 
 
 
-#divcreate{
+#principalSection{
     width: 80%;
     border: 2px solid #00c1d5;
     margin: 0 auto;     
     margin-top: 70px;
 }
 
-#divcr2{
+#firstSection{
     margin-left: 53%;
     width: 42%;
     color: white;
 }
 
-#divcr1{
+#secondSection{
     float: left;
     margin-left: 5%;
     width: 42%;
