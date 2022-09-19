@@ -9,14 +9,13 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
         crossorigin="anonymous"
         />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />  
+        <link rel="stylesheet" type="text/css" href="css/style.css" /> 
         
-        <!--AQUÍ CONECTE EL JAVASCRIPT-->
-        <script type="text/javascript" src="../javascript/main.js"></script>
-
+        <!--AQUÍ CONECTE EL JAVASCRIPT SÓLO SI SE USA EL onclick AQUÍ DENTRO DEL HTML-->
+        <script type="text/javascript" src="javascript/CustomerCreation.js"></script>
 
         <title>Create Account</title>
-      </head>
+    </head>
     <body style="background-image: url(img/background.jpg);">
         <nav class="navbackground"  >
           <div class="container">
@@ -59,18 +58,30 @@
               <label class="form-label">Comfirm Your Password</label>
               <input type="password" class="form-control" id="confirmPasswordInput">
             </div>
+            <!--QUITADO POR PRUEBA
             <a href="log_in.html">
+            -->
 
-              <!--REFERENCIANDO FUNCIÓN EN JAVASCRIPT-->
-              <button id="createCustomer" style= "font-family: consolas; background-color: rgb(219, 143, 0); width: 40%; margin-left: 30%;" class="btn btn-primary" onclick="insertCustomerData()">CREATE ACCOUNT</button> <!--onclick="insertCustomerData()"-->
+            <!--<a href="customer_order_list.html">-->
 
-
+              <!--REFERENCIANDO FUNCIÓN EN JAVASCRIPT
+                SÓLO SI NO SE USA EL onclick AQUÍ DENTRO DEL HTML
+              <button id="createCustomer" style= "font-family: consolas; background-color: rgb(219, 143, 0); width: 40%; margin-left: 30%;" type="button" class="btn btn-primary">CREATE ACCOUNT</button>
+              -->
+              <!--SÓLO SI SE USA EL onclick AQUÍ DENTRO DEL HTML, PARA LA PRUEBA DE JSON SE USARÁ SÓLO UN .js, TENDRÁ type="button" POR EL MOMENTO-->
+              <button id="createCustomer" style= "font-family: consolas; background-color: rgb(219, 143, 0); width: 40%; margin-left: 30%;" type="button" class="btn btn-primary" onclick="insertCustomerData()">CREATE ACCOUNT</button>
               
-            </a> 
+            <!--</a>--> 
           </form>
-
           <br/>
         </div>
       </div>
+
+              
+        <!--AQUÍ CONECTE EL JAVASCRIPT SÓLO SI NO SE USA EL onclick AQUÍ DENTRO DEL HTML
+          PARA LA PRUEBA DE JSON SE USARÁ SOLO UN .js
+        <script type="text/javascript" src="javascript/main.js"></script>
+        -->
+
     </body>
 </html>
