@@ -40,6 +40,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  color: white;
 }
 
 #formlog{
@@ -76,6 +77,60 @@ body{
     margin-left: 5%;
     width: 42%;
     color: white;
+}
+
+
+.searchMenuPanel{
+    float: left;
+    margin-left: 0%;
+    width: 30%;
+}
+
+
+.searchMenuPanel select{
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid #00c1d5;
+}
+
+.searchMenuPanel input{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    border: 2px solid #00c1d5;
+}
+
+.searchMenuPanel button{
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 100;
+    border: 2px solid #00c1d5;
+    background-color: #00c1d5;
+    color: #070D24;
+}
+
+.searchMenuPanel hr{
+    margin-left: 10%;
+    height: 3px;
+    width: 80%;
+    background-color: #00c1d5;
+    border-color: #00c1d5;
+  }
+
+
+
+#resultSearchPanel{
+    border-radius: 10px;
+    border: 2px solid #00c1d5;
+    margin-left: 30%;
+    width: 70%;
+    color: white;
+    background-color: #070D24;
 }
 
 

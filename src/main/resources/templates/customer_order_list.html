@@ -25,20 +25,45 @@
             <img src="img/icon.png" width="110" height="100">
             <a href = "customer_product_list.html"><button>VIEW PRODUCTS</button></a>
             <button disabled>VIEW ORDERS</button>
+            <a href = "log_in.html" style="float: right;"><button>LOG OUT</button></a>
           </div>
         </nav>
 
       <div id = "back">
-        <div id = "principalSection">
-
-          
-
-          <form id="secondSection">
-          </form>
-          <form id="firstSection">         
-          </form>
-
-          <br/>
+        <div id = "principalSection" style="border: 0px">
+          <div class="searchMenuPanel">
+            <br/>
+            <select name="supplier">
+              <option selected>Supplier</option>
+              <option>Sony</option>
+              <option>Microsoft</option>
+              <option>Nintendo</option>
+            </select>
+            <br/>
+            <br/>
+            <select name="category">
+              <option selected>Product Category</option>
+              <option>Shooter</option>
+              <option>Karts</option>
+              <option>Moba</option>
+            </select>
+            <br/>
+            <br/>
+            <div id = "divlog">
+              <div style="float: left; width: 48%;"><input type="text" name="lower" placeholder="Lower Price"></div>
+              <div style="margin-left: 52%; width: 48%;"><input type="text" name="higher" placeholder="Higher Price"></div>
+            </div>
+            <br/>
+            <button>Filter</button>
+            <br/>
+            <br/>
+            <hr/>
+            <br/>
+            <br/>
+            <button style="margin-left: 20%; width: 60%; background-color: rgb(219, 143, 0); border: 0px; font-size: 25px;">VIEW CART</button>
+          </div>
+          <div id="resultSearchPanel">
+          </div>
         </div>
       </div>
 

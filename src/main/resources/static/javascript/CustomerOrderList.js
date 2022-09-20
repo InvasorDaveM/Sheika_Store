@@ -28,12 +28,15 @@ const jsonData = [
   // Create table.
   const table = document.createElement("table");
   table.setAttribute("class", "table table-striped")
+  table.setAttribute("style", "font-family: consolas; font-size: 17px");
+
 
   // Create table header row using the extracted headers above.
   let tr = table.insertRow(-1);                   // table row.
 
   for (let i = 0; i < titles.length; i++) {
     let th = document.createElement("th");      // table header.
+    th.setAttribute("style", "color: #00c1d5");
     th.innerHTML = titles[i];
     tr.appendChild(th);
   }
@@ -45,10 +48,12 @@ const jsonData = [
 
     for (let j = 0; j < titles.length; j++) {
       let tabCell = tr.insertCell(-1);
+      tabCell.setAttribute("style", "color: white");
       if (j == titles.length - 1) {
         const button = document.createElement("button")
         button.setAttribute("class", "btn btn-primary")
         button.setAttribute("onclick","deleteSample(this)")
+        button.setAttribute("style", "background-color: rgb(219, 143, 0); color: black")
         button.textContent = "Eliminar"
         tabCell.appendChild(button)
       }
@@ -59,9 +64,9 @@ const jsonData = [
   }
 
   // Now, add the newly created table with json data, to a container.
-  const principalSection = document.getElementById('principalSection');
-  principalSection.innerHTML = "";
-  principalSection.appendChild(table);
+  const resultSearchPanel = document.getElementById('resultSearchPanel');
+  resultSearchPanel.innerHTML = "";
+  resultSearchPanel.appendChild(table);
 
   function deleteSample(data) {
     let s = data.parentNode
