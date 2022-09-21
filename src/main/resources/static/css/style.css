@@ -123,7 +123,6 @@ body{
   }
 
 
-
 #resultSearchPanel{
     border-radius: 10px;
     border: 2px solid #00c1d5;
@@ -133,4 +132,55 @@ body{
     background-color: #070D24;
 }
 
+.resultShopPanel{
+    border-left: 2px solid #00c1d5;
+    margin-left: 30%;
+    width: 70%;
+}
 
+
+.col-6 div{
+    border-radius: 5px !important;
+    border: 2px solid #00c1d5 !important;
+    background-color: #070D24 !important;
+    size-adjust: relative !important;
+}
+
+
+#buttonProduct{
+    min-width: 210px;
+    min-height: 260px;
+    height: auto;
+    width: auto;
+}
+
+.resultShopPanel img{
+    float: left;
+    border: 2px solid #00c1d5 !important;
+    margin-left: 3px !important;
+    margin-top: 3px !important;
+    width: 200px !important;
+    height: 250px !important;
+    background-color: black !important;
+}
+
+.resultShopPanel h1{
+    color:rgb(219, 143, 0);
+    font-size: 20px;
+    font-family: consolas;
+}
+
+.resultShopPanel h2{
+    color:white;
+    font-size: 15px;
+    font-family: consolas;
+    text-align: left;
+}
+
+.resultShopPanel h3{
+    color:white;
+    font-size: 15px;
+    font-family: consolas;
+    text-align: right;
+    font-weight: 800;
+}
