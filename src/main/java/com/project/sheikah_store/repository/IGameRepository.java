@@ -9,7 +9,8 @@ import com.project.sheikah_store.model.Game;
 
 public interface IGameRepository extends JpaRepository<Game, Integer> {
 
-    @Query("FROM game")
+    @Query("FROM Game")
+    // @Query(value = "SELECT * FROM Game", nativeQuery = true)
     public List<Game> findAllGames();
 
 }

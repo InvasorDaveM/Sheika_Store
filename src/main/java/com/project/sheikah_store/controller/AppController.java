@@ -25,13 +25,14 @@ public class AppController {
     public AppController(GameService gameService, IGameRepository iGameRepository) {
         this.gameService = gameService;
 
-        this.gamesList = this.iGameRepository.findAllGames();
+        // this.gamesList = this.iGameRepository.findAllGames();
     }
 
     @GetMapping("/")
     public String cutomerProductList(Model model) {
         model.addAttribute("games", gameService.getAllGames());
-        return "games";
+        System.out.println(gameService.getAllGames().toString() + " <----- La Tabla");
+        return "customer_product_list";
     }
 
     /*

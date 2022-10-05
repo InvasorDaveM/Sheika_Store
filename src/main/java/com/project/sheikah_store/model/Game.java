@@ -103,8 +103,8 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game [name=" + name + ", category=" + category + ", price=" + price + ", description=" + description
-                + ", imagePath=" + imagePath + ", producer=" + producer + "]";
+        return "Game {name=" + name + ", category=" + category + ", price=" + price + ", description=" + description
+                + ", imagePath=" + imagePath + ", producer=" + producer + "}";
     }
 
 }
