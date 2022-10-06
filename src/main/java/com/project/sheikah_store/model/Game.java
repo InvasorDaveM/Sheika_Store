@@ -12,7 +12,11 @@ import javax.persistence.Table;
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /*
+     * @GeneratedValue(strategy = GenerationType.IDENTITY)
+     * private Integer reference;
+     */
+    @Column(name = "reference_game", nullable = false)
     private Integer reference;
 
     @Column(name = "name_game", nullable = false)
