@@ -13,7 +13,7 @@
         
         <!--AQUÍ CONECTE EL JAVASCRIPT SÓLO SI SE USA EL onclick AQUÍ DENTRO DEL HTML-->
         <script type="text/javascript" src="javascript/CustomerCreation.js"></script>
-
+ 
         <title>Create Account</title>
     </head>
     <body style="background-image: url(img/background.jpg);">
@@ -29,30 +29,34 @@
         <div id = "principalSection">
           <br/>
 
-          <form id="secondSection">
+          <form id="secondSection" th:action="@{/customer_connection}" th:object="${customerObject}" method="POST">
             <div class="mb-3">
               <label class="form-label">Name</label>
-              <input class="form-control" id="nameInput">
+
+
+
+              
+              <input class="form-control" id="nameInput" th:field="*{name}">
             </div>
             <div class="mb-3">
-              <label class="form-label">Address</label>
-              <input class="form-control" id="addressInput">
+              <label class="form-label">Email</label>
+              <input class="form-control" id="emailInput" th:field="*{email}">
             </div>
             <div class="mb-3">
               <label class="form-label">Birthdate</label>
               <br/>
-              <input style="font-family: consolas; background-color: #00c1d5; width: 100%; height: 40px;" type="date" id="birthdateInput" min="1900-01-01">
+              <input style="font-family: consolas; background-color: #00c1d5; width: 100%; height: 40px;" type="date" id="birthdateInput" min="1900-01-01" th:field="*{birthdate}">
             </div>
           </form>
 
-          <form id="firstSection">
+          <form id="firstSection" th:action="@{/account_connection}" th:object="${accountObject}" method="POST">
             <div class="mb-3">
               <label class="form-label">Create Your User Name</label>
-              <input class="form-control" id="userInput">
+              <input class="form-control" id="userInput" th:field="*{user}">
             </div>
             <div class="mb-3">
               <label class="form-label">Create Your Password</label>
-              <input type="password" class="form-control" id="passwordInput">
+              <input type="password" class="form-control" id="passwordInput" th:field="*{password}">
             </div>
             <div class="mb-3">
               <label class="form-label">Comfirm Your Password</label>

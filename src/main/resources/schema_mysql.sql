@@ -53,3 +53,43 @@ Experience the ultimate combination of speed and power in DOOM Eternal - the nex
     "Cyberpunk 2077 is an open world action-adventure RPG set in the megalopolis of Night City, where you will step into the shoes of a cyberpunk mercenary or mercenary and experience their life and death struggle for survival. Improved and with new additional free content. Customize your character and playstyle as you take on jobs, build your reputation, and unlock upgrades. The relationships you forge and the decisions you make will shape the world around you. Legends are born here. What will be yours?",
     "img/products/Cyberpunk 2077.png",
     "CD Projekt Red")
+
+
+
+    CREATE DATABASE sheikah_store;
+USE sheikah_store;
+CREATE TABLE server_account(
+	code_account INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_account VARCHAR(30) NOT NULL,
+    password_account VARCHAR(30) NOT NULL,
+    type_account ENUM('Customer', 'Administrator') NOT NULL DEFAULT 'Customer'
+);
+CREATE TABLE administrator(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    code_account INT NOT NULL,
+    FOREIGN KEY (code_account) REFERENCES server_account (code_account)
+);
+CREATE TABLE customer(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name_customer VARCHAR(50) NOT NULL,
+    birthdate DATE NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    address VARCHAR(50) NOT NULL,
+    code_account INT NOT NULL,
+    FOREIGN KEY (code_account) REFERENCES server_account (code_account)
+);
+CREATE TABLE game(
+	reference_game INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name_game VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    price DOUBLE NOT NULL,
+    description_game TEXT NOT NULL,
+    image_path VARCHAR(100) NOT NULL,
+    producer VARCHAR(50) NOT NULL
+);
+CREATE TABLE library(
+	reference_game INT NOT NULL,
+    id INT NOT NULL,
+    FOREIGN KEY (reference_game) REFERENCES game (reference_game),
+    FOREIGN KEY (id) REFERENCES customer (id)
+)

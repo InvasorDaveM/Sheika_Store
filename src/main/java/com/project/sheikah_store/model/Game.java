@@ -40,7 +40,9 @@ public class Game {
     public Game() {
     }
 
-    public Game(String name, String category, double price, String description, String imagePath, String producer) {
+    public Game(int reference, String name, String category, double price, String description, String imagePath,
+            String producer) {
+        this.reference = reference;
         this.name = name;
         this.category = category;
         this.price = price;
@@ -107,8 +109,8 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game {name=" + name + ", category=" + category + ", price=" + price + ", description=" + description
-                + ", imagePath=" + imagePath + ", producer=" + producer + "}";
+        return "Game [name=" + name + ", category=" + category + ", price=" + price + ", description=" + description
+                + ", imagePath=" + imagePath + ", producer=" + producer + "]";
     }
 
 }
